@@ -2,9 +2,8 @@
 
 ## Environment
 
-- Download and install python from here https://www.python.org/downloads/ 
-- Tested on Python 3.7 and 3.8 on Windows 10 have been tested but newer version most likely will work as well
-- Download [https://github.com/divusmetaphysica/twitch-clip-downloader/archive/main.zip]
+- Download and install python from here https://www.python.org/downloads/ (Tested on Python 3.7 and 3.8 on Windows 10 but newer version most likely will work as well)
+- Download https://github.com/divusmetaphysica/twitch-clip-downloader/archive/main.zip
 - Extract the **twitch-clip-downloader** folder from the ZIP
 - Go to the new **twitch-clip-downloader** folder
 - In the location bar type `cmd` then `<Enter key>`
