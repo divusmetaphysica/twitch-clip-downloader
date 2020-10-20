@@ -1,7 +1,6 @@
-__pycache__
-.mypy_cache
-
-.cliploader
-
+__pycache__/
+.mypy_cache/
+.venv/
+.vscode/
 clips.json
-downloaded
+downloaded/
