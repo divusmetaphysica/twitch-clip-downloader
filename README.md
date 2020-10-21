@@ -66,7 +66,7 @@ link.click();
 - In the location bar type `cmd` then `<Enter key>`
 - Enter the following lines in the **cmd.exe** window:
 ```bash
-python.exe clip_downloader.py
 .venv\Scripts\activate.bat
+python.exe clip_downloader.py
 ``` 
 - There should now be a folder called **downloaded** with your clips in it
