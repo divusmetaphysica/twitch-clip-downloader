@@ -1,16 +1,16 @@
 # Twitch Clip Downloader
 
-## Environment
+## Initial preparations
 
 - Download and install python from here https://www.python.org/downloads/ (Tested on Python 3.7 and 3.8 on Windows 10 but newer version most likely will work as well)
 - Download https://github.com/divusmetaphysica/twitch-clip-downloader/archive/main.zip
-- Extract the **twitch-clip-downloader** folder from the ZIP
-- Go to the new **twitch-clip-downloader** folder
+- Extract the **twitch-clip-downloader-main** folder from the ZIP
+- Go to the new **twitch-clip-downloader-main** folder
 - In the location bar type `cmd` then `<Enter key>`
 - Enter the following lines in the **cmd.exe** window:
 ```bash
 python -m venv --copies .venv
-.venv/Scripts/activate
+.venv\Scripts\activate.bat
 python.exe -m pip install -r requirements.txt
 ```
 
@@ -21,7 +21,7 @@ python.exe -m pip install -r requirements.txt
 - Open your browser
 - Log in to twitch if you are not already logged in
 - Go to: https://www.twitch.tv/manager/clips
-- Make sure to scroll down if you have a lot of clips so that all of them are pre-loaded otherwise the script won't be able to find them all
+- Hold the `<End Key>` to scroll down and preload all the clip links otherwise the script won't be able to find them all
 - Press F12 to open the dev tools of the browser
 - Select the Console tab in the dev tools
 - Paste the following code in there:
@@ -57,12 +57,16 @@ link.click();
 ``` 
 - Press enter
 - A file called **clips.json** should now download
-- Move the downloaded file to the **twitch-clip-downloader** folder and make sure the name is **clips.json** (might not be the case any more if you do this again)
+- Move the downloaded file to the **twitch-clip-downloader-main** folder and make sure the name is **clips.json** (might not be the case any more if you do this again)
 
 ### Now that we have a list, let's do the actual download
 
 - Open the file explorer
-- Go to the **twitch-clip-downloader** folder
+- Go to the **twitch-clip-downloader-main** folder
 - In the location bar type `cmd` then `<Enter key>`
-- Type `python.exe clip_downloader.py` followed by `<Enter key>` 
+- Enter the following lines in the **cmd.exe** window:
+```bash
+python.exe clip_downloader.py
+.venv\Scripts\activate.bat
+``` 
 - There should now be a folder called **downloaded** with your clips in it
