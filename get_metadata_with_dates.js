@@ -19,9 +19,13 @@
         // try to retrieve the date of the clip (this is more likely to fail than other things so we just continue if
         // it didn't work (slow requests for example)
         try {
-            const date = document.getElementsByClassName('tw-capcase tw-ellipsis')[0].innerText;
-            current.title += ' - ' + date;
-            console.log('Processing ' + linksAndTitles.length + '/' + total + ' (extracted clip date)');
+            var date = document.getElementsByClassName('tw-capcase tw-ellipsis')[0].innerText;
+            //current.title += ' - ' + date;
+            //console.log('Processing ' + linksAndTitles.length + '/' + total + ' (extracted clip date)');
+            var views = document.getElementsByClassName('tw-pd-l-05')[0].innerText;
+            var d = new Date(date);
+            date = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
+            current.title = date + ' ' + current.title + ' [' + views + ']'
         } catch (e) {
             console.error(e);
         }

@@ -8,7 +8,7 @@ from contextlib import contextmanager
 
 logging.basicConfig(format='[%(levelname)s]: %(message)s', level=logging.INFO)
 num_of_workers = 10
-allowed_characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_- .\''
+allowed_characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_- .\'[]'
 target_dir = Path('downloaded')
 if not target_dir.exists():
     target_dir.mkdir()
