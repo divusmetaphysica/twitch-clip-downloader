@@ -11,7 +11,11 @@ from typing import List, Set
 import aiofiles
 import aiohttp
 
-logging.basicConfig(format="[%(levelname)s]: %(message)s", level=logging.INFO)
+logging.basicConfig(
+    format="[%(asctime)s %(levelname)s]: %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S",
+    level=logging.INFO,
+)
 allowed_characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789_- .'[]"
 old_files: Set[Path] = set()  # Used as a global previous file name cache
 
@@ -48,7 +52,7 @@ async def download_clips(session: aiohttp.ClientSession, target_dir: Path, entry
         last_file = sorted(
             [
                 target_dir / f"{file_name.stem} (0){file_name.suffix}",  # add original 0th
-                *(file for file in old_files if file.name.startswith(file_name.stem))
+                *(file for file in old_files if file.name.startswith(file_name.stem)),
             ]
         )[-1]
         last_count = int(last_file.name.rsplit("(", 1)[-1].rsplit(")", 1)[0])
