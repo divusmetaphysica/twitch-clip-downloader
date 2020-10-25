@@ -1,6 +1,17 @@
+# Internal
 __pycache__/
+*py[cod]
+
+# Checks
 .mypy_cache/
+
+# Environment
 .venv/
+*.env
+
+# Editor
 .vscode/
+
 clips.json
-downloaded/
+downloads/
+.python-version
